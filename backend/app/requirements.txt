@@ -1,0 +1,7 @@
+fastapi==0.111.0
+fastmcp>=2.3          # new server class + http_app()
+httpx>=0.27
+openai>=1.24.0
+python-dotenv>=1.0
+pydantic-settings>=2.2
+uvicorn[standard]==0.30.0

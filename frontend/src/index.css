@@ -1,0 +1,85 @@
+/* ---------- tiny reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(ellipse at top, #1e293b 0%, #0f172a 80%);
+  color: #e2e8f0;
+  display: grid;
+  place-items: center;          /* centers the card vertically + horizontally */
+  line-height: 1.4;
+}
+
+/* ---------- layout ---------- */
+.weather-wrapper {
+  width: 100%;
+  max-width: 26rem;             /* 416 px */
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;       /* 20 px */
+  background: #0f172a80;        /* translucent for the glow */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.4s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.6rem;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: #4f46e5;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover { background: #6366f1; }
+button:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}
+
+.summary {
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
